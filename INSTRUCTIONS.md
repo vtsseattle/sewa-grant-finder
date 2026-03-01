@@ -49,45 +49,31 @@
 
 ---
 
-## 4. Open Questions for Brainstorming
+## 4. Decisions Made
 
-### Data Sources
-1. **Where do grants come from?**
-   - Grants.gov (federal) — has a public API
-   - State-level portals (varies by state)
-   - Foundation grants (Foundation Directory Online, Candid/GuideStar)
-   - Corporate giving programs
-   - **Decision needed:** Which sources to prioritize for MVP?
+### Scope
+- **US-only** grants
+- **Grant size preference:** < $1M
+- **Special inclusion:** Foundation grants of Indian origin + grants from high-net-worth individuals
 
-2. **How often should grant data refresh?**
-   - Daily? Weekly? On-demand?
+### Data Source
+- **Brave Search API** (free tier) for real-time grant discovery
+- No database for MVP — search-driven architecture
 
 ### Matching & Scoring
-3. **How should we match grants to Sewa's pillars?**
-   - Simple: keyword matching against pillar-specific keyword lists
-   - Advanced: Semantic similarity using embeddings (e.g., OpenAI, sentence-transformers)
-   - Hybrid: Keywords for initial filter, AI for ranking
-   - **Decision needed:** Start simple or go AI-first?
+- **Keyword-based pillar scoring** computed on-the-fly for each search result
+- Rank results by how closely they match Sewa's 6 pillars
 
-4. **Should we pre-compute pillar scores or compute on-the-fly?**
-   - Pre-compute saves latency; on-the-fly allows custom queries
-
-### Users & Access
-5. **Who are the primary users?**
-   - Sewa national office staff
-   - Chapter leaders
-   - Volunteers helping with grant writing
-   - **Decision needed:** Do we need authentication/roles, or is this an open internal tool?
-
-6. **How many users are expected?**
-   - Likely <100 concurrent — influences infrastructure choices
+### User Features
+- **Location filtering** — narrow by US state or city
+- **Pillar filtering** — search within specific Sewa pillars
+- No authentication for MVP — open internal tool
 
 ### Tech Stack
-7. **Frontend:** React? Next.js? Simple HTML/JS?
-8. **Backend:** Node.js/Express? Python/FastAPI? Serverless functions?
-9. **Database:** PostgreSQL? SQLite for MVP? Elasticsearch for search?
-10. **Hosting:** Vercel? Azure? AWS? GitHub Pages (frontend only)?
-11. **AI/ML:** OpenAI API? Local models? Azure OpenAI?
+- **Next.js** (React) — frontend + API routes
+- **Brave Search API** — grant discovery engine
+- **No database** for MVP — stateless search
+- **Vercel** or local dev for hosting
 
 ---
 
