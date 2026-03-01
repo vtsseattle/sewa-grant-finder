@@ -25,7 +25,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Get a Brave Search API Key
 
 1. Go to [https://brave.com/search/api/](https://brave.com/search/api/)
-2. Sign up for the **Free** tier (2,000 queries/month)
+2. Sign up for a paid plan (the free tier is no longer available)
 3. Copy your API key into `.env.local`
 
 ## Project Structure

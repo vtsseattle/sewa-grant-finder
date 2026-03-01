@@ -57,7 +57,7 @@
 - **Special inclusion:** Foundation grants of Indian origin + grants from high-net-worth individuals
 
 ### Data Source
-- **Brave Search API** (free tier) for real-time grant discovery
+- **Brave Search API** (paid plan required — free tier no longer available) for real-time grant discovery
 - No database for MVP — search-driven architecture
 
 ### Matching & Scoring

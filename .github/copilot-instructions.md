@@ -34,7 +34,7 @@ These pillars are codified with keywords in `app/src/lib/pillars.ts`. When addin
 |-------|-----------|
 | Framework | **Next.js 16** (App Router, TypeScript) |
 | Styling | **Tailwind CSS** |
-| Data Source | **Brave Search API** (free tier, 2k queries/month) |
+| Data Source | **Brave Search API** (paid plan — free tier no longer available) |
 | Scoring | Keyword-based pillar matching in `app/src/lib/scoring.ts` |
 | Hosting | **Vercel** (production) + local dev |
 | Database | None (stateless, search-driven) |
